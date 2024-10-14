@@ -1,8 +1,10 @@
+
 import React from 'react'
+import Home from '../components/Home.module.css'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>Homee With Tiller</div>
   )
 }
 
