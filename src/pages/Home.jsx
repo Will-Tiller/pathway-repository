@@ -1,11 +1,7 @@
-
-import React from 'react'
-import Home from '../components/Home.module.css'
+//import React from 'react';
 
 function Home() {
-  return (
-    <div>Homee With Tiller</div>
-  )
+  return <h1>Home Page</h1>;
 }
 
-export default Home
+export default Home;
