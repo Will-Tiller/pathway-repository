@@ -1,0 +1,118 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .filterContainer {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .inputFilter, .selectFilter {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+  }
+  
+  .selectFilter {
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .listVagas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .vagaCard {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .vagaCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imagemVaga {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .infoVaga {
+    padding: 20px;
+  }
+  
+  .tituloVaga {
+    font-size: 1.3rem;
+    color: #371373;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .tipoVaga {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f8854c;
+    color: white;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .detalhesVaga {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .dataFim, .provincia {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .dataFim::before, .provincia::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #371373;
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .filterContainer {
+      flex-direction: column;
+    }
+  
+    .listVagas {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px 10px;
+    }
+  
+    .tituloVaga {
+      font-size: 1.1rem;
+    }
+  
+    .imagemVaga {
+      height: 150px;
+    }
+  }

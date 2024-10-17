@@ -1,0 +1,105 @@
+.quemSomos {
+    background-color: #381373; 
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    font-family:'Heebo',sans-serif;
+    list-style: none;
+}
+
+.link {
+    list-style: none;
+    text-decoration: none; 
+
+}
+
+.title {
+    color: #f8854c; 
+    font-size: 2.7rem;
+    margin-bottom: 25px;
+    position: relative;
+    font-weight: 700;
+    list-style: none;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 2px;
+    background-color: #f8854c; 
+    position: absolute;
+    bottom: +2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px; 
+}
+
+.description {
+    font-size: 1.5rem; 
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight {
+    /* font-weight: bold; */
+    color: #f8854c;
+    font-weight: 800;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.button:hover {
+    background-color: #a08181;
+    color: #381373;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+}

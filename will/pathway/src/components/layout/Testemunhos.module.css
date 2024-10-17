@@ -1,0 +1,145 @@
+.testemunhos {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #f5671f; 
+    font-size: 2.7rem;
+    margin-bottom: 25px;
+    position: relative;
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 2px;
+  background-color: #f5671f; 
+  position: absolute;
+  bottom: +2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px; 
+}
+
+.title:hover{
+
+  transition: 0.6s;
+  color: #4B0082;
+}
+
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonialContainer {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  scrollbar-width: none; 
+}
+
+.testimonialContainer::-webkit-scrollbar {
+  display: none; 
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  max-width: 300px;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-weight: bold;
+  color: #4B0082;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(75, 0, 130, 0.7);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: rgba(75, 0, 130, 1);
+}
+
+.prevButton {
+  left: -30px;
+}
+
+.nextButton {
+  right: -30px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .title {
+      font-size: 1.8rem;
+  }
+
+  .quote {
+      font-size: 1rem;
+  }
+
+  .author {
+      font-size: 0.9rem;
+  }
+
+  .position {
+      font-size: 0.8rem;
+  }
+
+  .navButton {
+      font-size: 1.5rem;
+      padding: 5px 10px;
+  }
+
+  .prevButton, .nextButton {
+      left: -10px;
+      right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navButton {
+      display: none;
+  }
+
+  .testimonialContainer {
+      padding: 15px;
+  }
+}

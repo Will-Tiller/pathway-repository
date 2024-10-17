@@ -1,0 +1,138 @@
+/* Navbar.module.css */
+:root {
+    --primary-color: #381373;
+    --secondary-color: #f5671f;
+    --text-color: #333;
+    --bg-color: #fff;
+  }
+  
+  .navbar {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--secondary-color) 3px solid;
+  }
+  
+  .logo {
+    margin-left: 5rem;
+  }
+  
+  .logo img {
+    height: 50px; 
+  }
+
+  .navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    margin: 1rem;
+    position: relative;
+}
+
+.navLinks li a {
+    color: var(--bg-color);
+    text-decoration: none; 
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px; 
+    position: relative;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+  
+  .navLinks ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks ul li {
+    margin: 0 1rem;
+  }
+  
+  .navLinks ul li a {
+    color: var(--bg-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a:hover,
+  .navLinks li.current a {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color); 
+  }
+  
+  .registar {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .registar:hover {
+    background-color: #d85616; 
+    transform: scale(1.05);
+  }
+  
+  /* Responsividade */
+  /* @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #logo {
+      margin-bottom: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  
+    .registar {
+      margin-top: 1rem;
+    }
+  } */
+
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navLinks li {
+        margin: 0.5rem 0;
+    }
+
+    .registar {
+        margin-top: 1rem;
+        width: 100%; 
+    }
+}
